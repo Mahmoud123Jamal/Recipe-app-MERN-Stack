@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // You can integrate with backend API here (e.g., send message)
+
     console.log(formData);
     setSubmitted(true);
     setFormData({ name: "", email: "", message: "" });

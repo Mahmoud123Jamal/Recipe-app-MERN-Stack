@@ -10,7 +10,8 @@ app.use(express.static("public"));
 app.use("/uploads", express.static(path.join(__dirname, "../public/uploads")));
 
 app.use(cors());
-// Routes
+
+// Routing
 
 app.use("/api/recipes", recipeRoutes);
 app.use("/api/auth", authRoutes);
