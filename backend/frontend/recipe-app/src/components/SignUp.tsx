@@ -7,8 +7,10 @@ function SignUp() {
     handleSubmit,
     handleEmail,
     handlePassword,
+    handleConfirmPassword,
     email,
     password,
+    confirmPassword,
     error,
     success,
   } = useUserContext();
@@ -38,11 +40,21 @@ function SignUp() {
 
       <Form.Group className="mb-3" controlId="signupConfirmPassword">
         <Form.Label>Confirm password</Form.Label>
-        <Form.Control type="password" placeholder="Re-enter password" />
+        <Form.Control
+          type="password"
+          value={confirmPassword}
+          onChange={handleConfirmPassword}
+          placeholder="Re-enter password"
+        />
       </Form.Group>
 
       {error && <p className="text-danger">{error}</p>}
       {success && <p className="text-success">{success}</p>}
+
+      <Button type="submit" className="mt-2 w-100">
+        Sign Up
+      </Button>
+
       <div className="mt-3 text-center">
         <small>
           Already have an account?
